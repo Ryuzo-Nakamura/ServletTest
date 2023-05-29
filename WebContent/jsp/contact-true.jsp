@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Servlet/JSP Test</title>
+</head>
+<body>
+
+<%@page import="bean.Form" %>
+
+<% Form form=(Form)request.getAttribute("form"); %>
+<p>氏名：<%=form.getName() %></p>
+<p>会社：<%=form.getCompany() %></p>
+<p>メールアドレス：<%=form.getMail() %></p>
+<p>お問合せ内容</p>
+<%=form.getContent() %><br>
+<% if(form.getMagazines() != null)  { %>
+	<p>配信を希望するメールマガジン</p>
+	<% for(String s : form.getMagazines()) { %>
+		・<%=s %><br>
+	<% } %>
+<% }else { %>
+	<p>メールマガジンの配信を希望しない。</p>
+<% }  %>
+<p>資料請求を希望：<%=form.getInformation() %></p>
+<p>この度は資料請求いただきありがとうございます。以下のリンクから資料ダウンロードが可能です。</p>
+<a href="#">資料をダウンロード</a>
+</body>
+</html>
