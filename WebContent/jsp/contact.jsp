@@ -7,7 +7,7 @@
 <title>Servlet/JSP Test</title>
 </head>
 <body>
-
+<h1>お問合せフォーム</h1>
 <form action="../servlet/contact" method="post">
 	<p>氏名 <input type="text" name="name" required></p>
 	<p>会社 <input type="text" name="company"></p>
