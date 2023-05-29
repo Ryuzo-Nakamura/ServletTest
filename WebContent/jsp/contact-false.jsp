@@ -1,12 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Servlet/JSP Test</title>
-</head>
-<body>
+
+<%@ include file="../header.html" %>
 
 <%@page import="bean.Form" %>
 
@@ -25,5 +20,5 @@
 	<p>メールマガジンの配信を希望しない。</p>
 <% }  %>
 <p>資料請求を希望：<%=form.getInformation() %></p>
-</body>
-</html>
+
+<%@ include file="../footer.html" %>

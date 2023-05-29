@@ -1,12 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Servlet/JSP Test</title>
-</head>
-<body>
+
+<%@ include file="../header.html" %>
+
 <h1>お問合せフォーム</h1>
 <form action="../servlet/contact" method="post">
 	<p>氏名 <input type="text" name="name" required></p>
@@ -28,5 +24,4 @@
 	<p><input type="submit" value="送信"></p>
 </form>
 
-</body>
-</html>
+<%@ include file="../footer.html" %>
